@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Abu Hurera | Portfolio</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="css/style.css" />
+   <!-- Font Awesom -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   <!-- AOS CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+   <!-- Bootstrap Icons -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+   <!-- Animate.css CDN for smooth fade effects -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+   <style>
+      #scrollTopBtn {
+         display: none;
+         position: fixed;
+         bottom: 30px;
+         right: 30px;
+         z-index: 99;
+         font-size: 24px;
+         border: none;
+         outline: none;
+         background-color: #343a40;
+         color: white;
+         cursor: pointer;
+         padding: 10px 15px;
+         border-radius: 10px;
+      }
+
+      .hero-section {
+         background: linear-gradient(to right, #1e3c72, #2a5298);
+         color: white;
+         padding: 100px 0;
+         text-align: center;
+      }
+
+      .tech-stack {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 15px;
+      }
+
+      .tech-item {
+         padding: 10px 20px;
+         background: linear-gradient(135deg, #1e3c72, #2a5298);
+         color: #fff;
+         border-radius: 30px;
+         font-weight: 500;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+         transition: all 0.3s ease;
+         border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .tech-item:hover {
+         transform: scale(1.05);
+         background: linear-gradient(135deg, #4b6cb7, #182848);
+         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+         cursor: pointer;
+      }
+   </style>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent shadow-sm fixed-top glass-navbar">
+      <div class="container">
+         <a class="navbar-brand fw-bold text-white" href="#">Abu Hurera</a>
+
+         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse animate__animated animate__fadeInDown" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto text-center">
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="#about">About</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" id="projectDropdown" role="button"
+                     data-bs-toggle="dropdown" aria-expanded="false">
+                     Projects
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end animate__animated animate__fadeIn"
+                     aria-labelledby="projectDropdown">
+                     <li><a class="dropdown-item" href="#busmanagement">Bus Management</a></li>
+                     <li><a class="dropdown-item" href="#jobskill">JobSkill</a></li>
+                     <li><a class="dropdown-item" href="#chatapp">chatapp</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="#skills">Skills</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="#contact">Contact</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <!-- <header class="bg-dark text-white text-center p-5" data-aos="fade-down">
+      <h1 class="display-3 fw-bold">Abu Hurera</h1>
+      <p class="lead">Software Developer | Web Designer</p>
+      <a href="#projects" class="btn btn-outline-light mt-3">View My Work</a>
+   </header> -->
+
+   <!-- Hero Section -->
+   <section class="hero-section d-flex flex-column justify-content-center align-items-center text-center"
+      data-aos="fade-down">
+      <h1 class="display-3 fw-bold hero-name">Abu Hurera</h1>
+      <p class="lead mt-2">
+         <span id="typed"></span>
+      </p>
+
+      <!-- Tech Stack -->
+      <div class="tech-stack mt-4">
+         <span class="tech-item">Java</span>
+         <span class="tech-item">Spring Boot</span>
+         <span class="tech-item">React</span>
+         <span class="tech-item">Bootstrap</span>
+         <span class="tech-item">MySQL</span>
+         <span class="tech-item">GitHub Actions</span>
+         <span class="tech-item">CI/CD</span>
+         <span class="tech-item">REST API</span>
+      </div>
+
+      <!-- Button -->
+      <a href="#projects" class="btn hero-btn mt-4">
+         <i class="fas fa-briefcase me-2"></i> View My Work
+      </a>
+   </section>
+
+
+
+
+   <section id="about" class="container py-5" data-aos="fade-up">
+  <h2 class="text-center mb-5 fw-bold text-gradient">About Me</h2>
+  <div class="row align-items-center gy-5">
+    <!-- Profile Image -->
+    <div class="col-lg-5 text-center">
+      <div class="profile-pic-container">
+        <img src="assets/images/profilepic.png" 
+             class="img-fluid rounded-circle shadow profile-pic" 
+             alt="Abu Hurera">
+        <span class="profile-ring"></span>
+      </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="col-lg-7">
+      <p class="lead">
+        👋 Hi, I’m <strong>Abu Hurera</strong> — a passionate 
+        <span class="highlight">Full-Stack Developer</span> 
+        who crafts clean, modern, and user-focused digital experiences.  
+        I specialize in <strong>Java-powered backends</strong> and 
+        <strong>responsive, dynamic frontends</strong>.
+      </p>
+
+      <ul class="list-unstyled mt-4 about-list">
+        <li><strong>📍 Location:</strong> Pakistan</li>
+        <li><strong>📧 Email:</strong> 
+          <a href="mailto:abuhurera52@gmail.com" class="text-decoration-none">abuhurera52@gmail.com</a>
+        </li>
+        <li><strong>💼 Skills:</strong></li>
+      </ul>
+
+      <div class="skill-badges mt-2">
+        <span class="badge bg-primary">Java</span>
+        <span class="badge bg-success">Spring Boot</span>
+        <span class="badge bg-info text-dark">React</span>
+        <span class="badge bg-dark">Bootstrap</span>
+        <span class="badge bg-warning text-dark">MySQL</span>
+        <span class="badge bg-secondary">REST API</span>
+      </div>
+
+      <div class="mt-4">
+        <strong>🚀 Goal:</strong> Build secure, scalable, and beautiful apps 
+        that deliver real-world impact.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   <!-- Education Section -->
+   <section id="education" class="container py-5" data-aos="fade-up">
+      <h2 class="text-center mb-5 fw-bold">Education</h2>
+      <div class="timeline">
+         <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-icon">🎓</div>
+            <div class="timeline-content">
+               <h5>Bachelor of Science in Computer Science</h5>
+               <p>SULC University of Sindh, Jamshoro</p>
+               <span>2021 - 2025 (Expected)</span>
+            </div>
+         </div>
+         <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-icon">🏫</div>
+            <div class="timeline-content">
+               <h5>Intermediate (Pre-Medical)</h5>
+               <p>Board of Intermediate and Secondary Education Hyderabad</p>
+               <span>2019 - 2021</span>
+            </div>
+         </div>
+         <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-icon">📚</div>
+            <div class="timeline-content">
+               <h5>Matriculation (Science)</h5>
+               <p>Board of Intermediate and Secondary Education Hyderabad</p>
+               <span>2017 - 2019</span>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- CV Section -->
+   <section id="download-cv" class="py-5 text-center cv-section" data-aos="zoom-in">
+      <div class="container">
+         <h2 class="mb-4">📄 My CV</h2>
+         <p class="mb-4">Want to know more about my skills and experience?
+            View or Download my CV below.</p>
+
+         <!-- Buttons -->
+         <a href="assets/files/Abu Hurera CV.pdf" download class="cv-btn me-2">
+            <i class="fas fa-download"></i> Download CV
+         </a>
+
+         <button class="cv-btn view-btn" data-bs-toggle="modal" data-bs-target="#cvModal">
+            <i class="fas fa-eye"></i> View CV
+         </button>
+      </div>
+   </section>
+
+   <!-- Modal -->
+   <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="cvModalLabel">My CV Preview</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <iframe src="assets/files/Abu Hurera CV.pdf" width="100%" height="600px" style="border:none;"></iframe>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+   <!-- Projects Section -->
+   <section id="projects" class="bg-light py-5" data-aos="fade-up">
+      <div class="container">
+         <h2 class="text-center fw-bold mb-5">🚀 My Projects</h2>
+         <div class="row g-4">
+
+            <!-- Project Card Template -->
+            <div class="col-md-6 col-lg-4">
+               <div class="project-card card border-0 shadow-lg h-100">
+                  <div class="project-img-container">
+                     <img src="assets/images/BusMangement.JPG" class="card-img-top" alt="Bus Management System">
+                     <div class="overlay">
+                        <a href="https://github.com/AbuHurera05/BusManagement/tree/master/BusManagement" target="_blank"
+                           class="btn btn-light btn-lg fw-bold">
+                           <i class="fab fa-github"></i> View Project
+                        </a>
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <h5 class="card-title fw-bold">Bus Management System</h5>
+                     <p class="tech-stack">
+                        <span class="badge bg-danger"><i class="fab fa-java"></i> Java</span>
+                        <span class="badge bg-primary"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="badge bg-warning text-dark"><i class="fab fa-html5"></i> HTML/CSS</span>
+                        <span class="badge bg-success"><i class="fas fa-code"></i> JSP</span>
+                     </p>
+                     <p class="card-text text-muted">A complete bus booking and management system with admin & user
+                        dashboards.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- JobSkill -->
+            <div class="col-md-6 col-lg-4">
+               <div class="project-card card border-0 shadow-lg h-100">
+                  <div class="project-img-container">
+                     <img src="assets/images/jobSkill.JPG" class="card-img-top" alt="JobSkill">
+                     <div class="overlay">
+                        <a href="https://github.com/AbuHurera05/JobSkill" target="_blank"
+                           class="btn btn-light btn-lg fw-bold">
+                           <i class="fab fa-github"></i> View Project
+                        </a>
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <h5 class="card-title fw-bold">JobSkill</h5>
+                     <p class="tech-stack">
+                        <span class="badge bg-danger"><i class="fab fa-java"></i> Java</span>
+                        <span class="badge bg-primary"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="badge bg-warning text-dark"><i class="fab fa-html5"></i> HTML/CSS</span>
+                        <span class="badge bg-success"><i class="fas fa-code"></i> JSP</span>
+                     </p>
+                     <p class="card-text text-muted">An online skill learning platform with job recommendation features.
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- ChatApp -->
+            <div class="col-md-6 col-lg-4">
+               <div class="project-card card border-0 shadow-lg h-100">
+                  <div class="project-img-container">
+                     <img src="assets/images/ChatApp.png" class="card-img-top" alt="ChatApp">
+                     <div class="overlay">
+                        <a href="https://github.com/AbuHurera05/ChatApp" target="_blank"
+                           class="btn btn-light btn-lg fw-bold">
+                           <i class="fab fa-github"></i> View Project
+                        </a>
+                     </div>
+                  </div>
+                  <div class="card-body">
+                     <h5 class="card-title fw-bold">ChatApp</h5>
+                     <p class="tech-stack">
+                        <span class="badge bg-danger"><i class="fab fa-java"></i> Java</span>
+                     </p>
+                     <p class="card-text text-muted">A real-time chat application for instant messaging.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Add more projects below as needed -->
+
+         </div>
+      </div>
+   </section>
+
+
+   <!-- Skill Section -->
+   <section id="skills" class="container py-5" data-aos="fade-up">
+      <h2 class="text-center mb-5">🚀 My Skills</h2>
+
+      <div class="row gy-4">
+
+         <div class="col-md-6">
+            <div class="skill-item">
+               <div class="skill-info">
+                  <span><i class="fab fa-html5"></i> HTML</span>
+                  <span class="skill-percent" data-percent="90">0%</span>
+               </div>
+               <div class="progress">
+                  <div class="progress-bar gradient-html"></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-md-6">
+            <div class="skill-item">
+               <div class="skill-info">
+                  <span><i class="fab fa-css3-alt"></i> CSS</span>
+                  <span class="skill-percent" data-percent="80">0%</span>
+               </div>
+               <div class="progress">
+                  <div class="progress-bar gradient-css"></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-md-6">
+            <div class="skill-item">
+               <div class="skill-info">
+                  <span><i class="fab fa-js"></i> JavaScript</span>
+                  <span class="skill-percent" data-percent="70">0%</span>
+               </div>
+               <div class="progress">
+                  <div class="progress-bar gradient-js"></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-md-6">
+            <div class="skill-item">
+               <div class="skill-info">
+                  <span><i class="fab fa-java"></i> Java</span>
+                  <span class="skill-percent" data-percent="85">0%</span>
+               </div>
+               <div class="progress">
+                  <div class="progress-bar gradient-java"></div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </section>
+
+
+
+   <!-- Contact Section -->
+   <section id="contact" class="contact-section py-5 text-white" data-aos="flip-right"
+      style="background: linear-gradient(135deg, #1f1f1f, #3b3b3b);">
+      <div class="container">
+         <h2 class="text-center mb-5">Contact Me</h2>
+         <div class="row">
+            <div class="col-md-5 mb-4 mb-md-0">
+               <div class="bg-secondary rounded p-4 h-100">
+                  <h5>📍 Location</h5>
+                  <p>Karachi, Sindh, Pakistan</p>
+                  <h5>📧 Email</h5>
+                  <p>junejoabuhurera52@gmail.com</p>
+                  <h5>📱 Phone</h5>
+                  <p>+92 348 3745809</p>
+                  <div class="mt-4">
+                     <a href="https://www.linkedin.com/in/abu-hurera-439b50333/" target="_blank"
+                        class="btn btn-outline-light btn-sm me-2 i bi-linkedin"> LinkedIn</a>
+                     <a href="https://github.com/AbuHurera05" target="_blank"
+                        class="btn btn-outline-light btn-sm bi bi-github"> GitHub</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-7">
+               <form onsubmit="submitForm(event)" class="bg-dark p-4 rounded shadow-sm">
+                  <div class="mb-3">
+                     <label class="form-label">Your Name</label>
+                     <input type="text" class="form-control bg-dark text-white border-light"
+                        placeholder="Enter your name" required>
+                  </div>
+                  <div class="mb-3">
+                     <label class="form-label">Your Email</label>
+                     <input type="email" class="form-control bg-dark text-white border-light"
+                        placeholder="Enter your email" required>
+                  </div>
+                  <div class="mb-3">
+                     <label class="form-label">Message</label>
+                     <textarea class="form-control bg-dark text-white border-light" rows="5"
+                        placeholder="Write your message..." required></textarea>
+                  </div>
+                  <div class="text-end">
+                     <button class="btn btn-outline-light" type="submit">Send Message</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+
+   <footer class="bg-dark text-white text-center py-4">
+      <p class="mb-1">© 2025 Abu Hurera. All rights reserved.</p>
+      <div>
+         <a href="https://github.com/AbuHurera05" class="text-white mx-2" target="_blank"><i
+               class="bi bi-github"></i></a>
+         <a href="https://www.linkedin.com/in/abu-hurera-439b50333/" class="text-white mx-2" target="_blank"><i
+               class="bi bi-linkedin"></i></a>
+         <a href="mailto:junejoabuhurera52@gmail.com" class="text-white mx-2"><i class="bi bi-envelope-fill"></i></a>
+      </div>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+   <script>
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      window.onscroll = function () {
+         scrollTopBtn.style.display = document.documentElement.scrollTop > 200 ? "block" : "none";
+      };
+      function topFunction() {
+         document.documentElement.scrollTop = 0;
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+         new Typed("#typed", {
+            strings: [
+               "Full Stack Developer",
+               "Java Programmer",
+               "Spring Boot Specialist",
+               "Cloud Enthusiast"
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+         });
+      });
+      AOS.init({
+         duration: 1000, // Animation speed in ms
+         once: true // Animate only once
+      });
+      // AOS.init();
+      // var typed = new Typed('#typed', {
+      //    strings: [
+      //       "Java Developer",
+      //       "Spring Boot Enthusiast",
+      //       "React Frontend Specialist",
+      //       "Full-Stack Web Developer"
+      //    ],
+      //    typeSpeed: 60,
+      //    backSpeed: 40,
+      //    backDelay: 1500,
+      //    loop: true
+      // });
+   </script>
+   <!-- Typed.js Script -->
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <!-- Bootstrap JS Bundle (includes Popper.js for dropdowns) -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <script src="js/script.js"></script>
+</body>
+
+</html>
